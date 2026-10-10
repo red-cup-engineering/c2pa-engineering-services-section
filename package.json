@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@contentauth/c2pa-node": "0.6.3",
-    "@red-cup-engineering/computer-content-engineering-services-section": "0.1.0",
-    "@red-cup-engineering/uri-services-section": "0.1.0"
+    "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/uri-services-section": "workspace:*"
   }
 }
