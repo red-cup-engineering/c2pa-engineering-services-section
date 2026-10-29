@@ -1,0 +1,50 @@
+{
+  "name": "@red-cup-engineering/c2pa-services-section",
+  "version": "0.4.0",
+  "type": "module",
+  "description": "Independently hireable C2PA 2.4 provenance and EU AI Act Article 50 disclosure binding service.",
+  "files": [
+    "content/",
+    "data/records/systemd/",
+    "scripts/",
+    "src/",
+    "types/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types/client.d.mts",
+      "import": "./src/client.mjs"
+    },
+    "./client": {
+      "types": "./types/client.d.mts",
+      "import": "./src/client.mjs"
+    },
+    "./rmn": "./src/c2pa-rmn.mjs"
+  },
+  "bin": {
+    "serve-c2pa-provenance-a2a": "./scripts/server.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/c2pa-rmn.mjs && node --check src/client.mjs && node --check scripts/execute-a2a-task.mjs && node --check scripts/server.mjs && node --check test/c2pa-provenance.test.mjs",
+    "test": "node --test test/c2pa-provenance.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@a2a-js/sdk": "1.0.0-beta.0",
+    "@contentauth/c2pa-node": "0.6.3",
+    "@lenticule-science/wit-transition-assay": "0.4.0",
+    "@red-cup-engineering/a2a-agent-card-key-service": "0.4.0",
+    "@red-cup-engineering/a2a-contracted-agent-service": "0.9.0",
+    "@red-cup-engineering/a2a-rmn-part-service": "0.2.0",
+    "@red-cup-engineering/a2a-rmn-task-client-service": "0.9.0",
+    "@red-cup-engineering/computer-data-engine": "0.10.0",
+    "@red-cup-engineering/ethereum-engineering-services-section": "0.15.0",
+    "@red-cup-engineering/relation-model-notation-conformance": "0.12.0",
+    "@red-cup-engineering/relation-model-notation-runtime": "0.8.0"
+  },
+  "devDependencies": {
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0"
+  }
+}
