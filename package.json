@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/c2pa-services-section",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "type": "module",
   "description": "C2PA 2.4 signing of AI-generated media with an EU AI Act Article 50 disclosure, bound on chain by the accountable publisher.",
   "files": [
@@ -22,5 +22,9 @@
     "@red-cup-engineering/computer-content-address-engineering-services-section": "^0.2.0",
     "@red-cup-engineering/uri-services-section": "^0.1.1"
   },
-  "private": false
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/c2pa-engineering-services-section.git"
+  }
 }
