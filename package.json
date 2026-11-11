@@ -18,9 +18,9 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@contentauth/c2pa-node": "0.6.3",
-    "@red-cup-engineering/computer-content-address-engineering-services-section": "0.2.0",
-    "@red-cup-engineering/uri-services-section": "0.1.1"
+    "@contentauth/c2pa-node": "^0.6.3",
+    "@red-cup-engineering/computer-content-address-engineering-services-section": "^0.2.0",
+    "@red-cup-engineering/uri-services-section": "^0.1.1"
   },
   "private": false
 }
