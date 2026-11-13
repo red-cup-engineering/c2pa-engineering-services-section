@@ -7,7 +7,7 @@
 import { readFileSync } from "node:fs";
 import { Builder, LocalSigner, Reader } from "@contentauth/c2pa-node";
 import { semanticId } from "@red-cup-engineering/computer-content-address-engineering-services-section/semiotic-content-address";
-import { makeNiUri } from "@red-cup-engineering/uri-services-section/ni-uri";
+import { makeNiUri } from "@red-cup-engineering/uri-engineering-services-section/ni-uri";
 
 const SOURCE_TYPES = new Set([
   "http://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia",
@@ -49,7 +49,7 @@ export async function signAiAsset({ operation, caller, certificatePath, privateK
   const signer = LocalSigner.newSigner(readFileSync(certificatePath), readFileSync(privateKeyPath), "es256", tsaUrl || undefined);
   const builder = Builder.withJson({
     claim_version: 2,
-    claim_generator_info: [{ name: "@red-cup-engineering/c2pa-services-section", version: "1.0.0" }],
+    claim_generator_info: [{ name: "@red-cup-engineering/c2pa-engineering-services-section", version: "1.0.0" }],
     title: operation.title,
     format: operation.mediaType,
     assertions: [],

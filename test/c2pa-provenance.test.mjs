@@ -5,7 +5,7 @@ import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { Reader } from "@contentauth/c2pa-node";
-import { makeNiUri } from "@red-cup-engineering/uri-services-section/ni-uri";
+import { makeNiUri } from "@red-cup-engineering/uri-engineering-services-section/ni-uri";
 import { aiAssetActId, signAiAsset, validateAiAssetOperation } from "../src/c2pa.mjs";
 
 const ROOT = resolve(import.meta.dirname, "..");
