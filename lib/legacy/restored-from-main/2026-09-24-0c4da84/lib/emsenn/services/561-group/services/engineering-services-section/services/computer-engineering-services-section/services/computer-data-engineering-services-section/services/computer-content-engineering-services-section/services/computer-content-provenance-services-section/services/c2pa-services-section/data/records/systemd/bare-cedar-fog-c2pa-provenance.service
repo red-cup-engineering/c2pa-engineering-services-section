@@ -1,0 +1,25 @@
+[Unit]
+Description=Bare Cedar Fog contracted C2PA provenance provider
+After=network-online.target bare-cedar-fog-rmn-semantic-conformance.service wit-transition-assay.service
+Wants=network-online.target bare-cedar-fog-rmn-semantic-conformance.service wit-transition-assay.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-services-section/services/computer-data-services-section/services/computer-content-services-section/services/computer-content-provenance-services-section/services/c2pa-services-section
+Environment=HOST=127.0.0.1
+Environment=PORT=8792
+Environment=BASE_URL=http://127.0.0.1:8792
+Environment=C2PA_TIMEOUT_MS=120000
+Environment=RMN_CONFORMANCE_AGENT=http://127.0.0.1:8786/.well-known/agent-card.json
+Environment=WIT_TRANSITION_ASSAY_AGENT=http://127.0.0.1:19827/.well-known/agent-card.json
+Environment=AGENT_CARD_SIGNING_KEY=/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-services-section/services/computer-data-services-section/services/computer-content-services-section/services/computer-content-provenance-services-section/services/c2pa-services-section/data/agent-card-signing/ed25519-private.pem
+Environment=AGENT_CARD_JWKS=/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-services-section/services/computer-data-services-section/services/computer-content-services-section/services/computer-content-provenance-services-section/services/c2pa-services-section/content/agent-card-signing/jwks.json
+Environment=AGENT_CARD_SIGNING_KID=c2pa-provenance-ed25519
+ExecStart=/home/emsenn/.config/nvm/versions/node/v24.13.1/bin/node scripts/server.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
