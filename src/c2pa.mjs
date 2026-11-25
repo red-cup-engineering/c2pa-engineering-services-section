@@ -6,8 +6,8 @@
  */
 import { readFileSync } from "node:fs";
 import { Builder, LocalSigner, Reader } from "@contentauth/c2pa-node";
-import { semanticId } from "@red-cup-engineering/semiotic-content-address-system";
-import { makeNiUri } from "@red-cup-engineering/uri-engineering-services-section/ni-uri";
+import { semanticId, makeNiUri } from "@red-cup-engineering/semiotic-content-address-system";
+
 
 const SOURCE_TYPES = new Set([
   "http://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia",
